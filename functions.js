@@ -9,13 +9,13 @@ let divGeneral = document.createElement("div");
 let select = document.createElement("select");
 let optionOne = document.createElement("option");
 optionOne.textContent = "Popularity (descendente)";
-optionOne.value = "pupularity.desc"
+optionOne.value = "pupularity.desc";
 select.appendChild(optionOne);
 
 let select = document.createElement("select");
 let optionTwo = document.createElement("option");
-optionTwo.textContent = "Popularity (descendente)";
-optionTwo.value = "pupularity.desc"
+optionTwo.textContent = "Promedio de votos (descendente)";
+optionTwo.value = "vote_average.desc";
 select.appendChild(optionTwo);
 
 select.onchange = () => {
@@ -28,11 +28,16 @@ makeImages(divGeneral);
 
 let year = document.createElement("select");
 let option01 = document.createElement("option");
-option01.textContent = "Popularity (as)"
+option01.textContent = "Popularity (descendente)";
 
-select.onchange = (1900) => (2022) {
+select.onchange = (year) => {
+    for(let i = 1900, i< 2022,i++) {
+        console.log(i)
+    }
     makeImages(divGeneral);
 };
 
+document.body.appendChild(divGeneral);
+document.body.appendChild(select);
 
 
